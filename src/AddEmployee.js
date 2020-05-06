@@ -45,24 +45,24 @@ class AddEmployee extends React.Component {
         return (
             <div className="container row">
 
-                <div class="form-group">
+                <div className="form-group">
                     <label>EmpID:</label>
                     <input type="text" placeholder="Enter ID" name="Empid" className="form-control" value={this.state.Empid} onChange={this.handleChange} />
                 </div>
 
-                <div class="form-group">
+                <div className="form-group">
                     <label>EmpName:</label>
                     <input type="text" placeholder="Enter Name" name="Name" className="form-control" value={this.state.Name} onChange={this.handleChange} />
                 </div>
-                <div class="form-group">
+                <div className="form-group">
                     <label>Gender:</label>
                     <input type="text" placeholder="Enter Gender" name="Gender" className="form-control" value={this.state.Gender} onChange={this.handleChange} />
                 </div>
-                <div class="form-group">
+                <div className="form-group">
                     <label>Designation:</label>
                     <input type="text" placeholder="Enter Designation" name="Designation" className="form-control" value={this.state.Designation} onChange={this.handleChange} />
                 </div>
-                <div class="form-group">
+                <div className="form-group">
                     <label>Salary:</label>
                     <input type="text" placeholder="Enter salary" name="salary" className="form-control" value={this.state.salary} onChange={this.handleChange} />
                 </div>

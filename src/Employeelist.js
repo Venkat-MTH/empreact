@@ -27,6 +27,11 @@ class Employeelist extends React.Component{
             headers: { 'Content-Type': 'application/json' }
         };
         const response = await fetch('http://localhost/EmployeeAPI/API/Employees/'+id, requestOptions)
+
+        let filteredArray = this.state.empdata.filter(item => item.Empid !== id)
+        this.setState({empdata: filteredArray});
+
+
        // const json = await response.json();
        
        // event.preventDefault();
