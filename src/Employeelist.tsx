@@ -1,9 +1,9 @@
 import React from 'react'
 import { Link } from "react-router-dom"
 
-class Employeelist extends React.Component{
-    constructor(){
-        super()
+class Employeelist extends React.Component<any,any>{
+    constructor(props:any){
+        super(props)
         this.state={
             empdata:[]
         }
@@ -21,14 +21,14 @@ class Employeelist extends React.Component{
         this.setState({ empdata: json })
       }
 
-    async handleDelete(id) {
+    async handleDelete(id:number) {
         const requestOptions = {
             method: 'DELETE',
             headers: { 'Content-Type': 'application/json' }
         };
         const response = await fetch('http://localhost/EmployeeAPI/API/Employees/'+id, requestOptions)
 
-        let filteredArray = this.state.empdata.filter(item => item.Empid !== id)
+        let filteredArray = this.state.empdata.filter((item:any) => item.Empid !== id)
         this.setState({empdata: filteredArray});
 
 
@@ -39,7 +39,7 @@ class Employeelist extends React.Component{
     }
 
       render(){
-          const emplist = this.state.empdata.map(item=>
+          const emplist = this.state.empdata.map((item:any) =>
             <tr>
                 <td>{item.Empid}</td>
                 <td>{item.Name}</td>

@@ -1,25 +1,29 @@
 import React from 'react'
+import Iemployee from "./Employee"
 
-class AddEmployee extends React.Component {
-    constructor() {
-        super()
+
+
+class AddEmployee extends React.Component<{},Iemployee> {
+    
+    constructor(props:any) {
+        super(props)
         this.state = {
             Empid: "",
-            Name: "",
-            Gender: "",
-            Designation: "",
-            salary: ""
+            Name:"",
+            Gender:"",
+            Designation:"",
+            salary:""
         }
         this.handleChange = this.handleChange.bind(this)
         this.handleClick = this.handleClick.bind(this)
     }
 
-    handleChange(event) {
+    handleChange(event:any) {
         const { name, value } = event.target
         this.setState({ [name]: value })
     }
 
-    async handleClick(event) {
+    async handleClick(event:any) {
 
         const requestOptions = {
             method: 'POST',
