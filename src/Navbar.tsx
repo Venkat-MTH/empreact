@@ -12,7 +12,7 @@ function Navbar() {
                     <a className="nav-link" href="/Employeelist">Employee</a>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link" href="/">Contact</a>
+                    <a className="nav-link" href="/Contact/4">Contact</a>
                 </li>
             </ul>
         </nav>
